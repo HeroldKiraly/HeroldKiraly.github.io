@@ -1,0 +1,8 @@
+*, *::before, *::after {
+    background-color: black;
+}
+
+.contentbox {
+    border: 1px black solid;
+    font-size: 24px;
+}
