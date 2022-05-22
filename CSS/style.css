@@ -1,8 +1,92 @@
 *, *::before, *::after {
-    background-color: black;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+.contact-me {
+    display: inline-block;
+}
+
+body {
+    background: linear-gradient(to bottom right, #00FFAA, #AAFF);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    margin-top: 5%;
+    flex-flow: wrap;
 }
 
 .contentbox {
-    border: 1px black solid;
-    font-size: 24px;
+    background-color: gray;
+    color: rgba(252, 252, 252, 0.753);
+    border: 10px solid black;
+    border-radius: 5%;
+    border-width: 5px;
+    padding: 20px;
+    width: 300px;
+    
+}
+
+.main-content {
+    color:rgba(252, 252, 252, 0.753);
+    margin-left: 25px;
+}
+.name {
+    margin: 0px;
+}
+
+.title {
+    margin-top: 1%;
+}
+
+.about-me h2 {
+    margin-bottom: 15px;
+}
+
+.about-me-text {
+    width: 100%;
+    margin: 0px;
+}
+
+
+
+.main-content h2 {
+    width: 100%;
+}
+
+.contentbox-img {
+    width: 250px; 
+    height: 250px;
+}
+
+footer {
+    color:rgb(252, 252, 252);
+    font-size: 18px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0px;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: wrap;
+}
+.skill-list h3 {
+    margin: 20px;
 }
