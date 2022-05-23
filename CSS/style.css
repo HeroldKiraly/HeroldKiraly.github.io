@@ -1,5 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    /*border: 1px solid red;*/
 }
 
 html {
@@ -12,7 +13,9 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom right, #00FFAA, #AAFF);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+    background-size: 400%, 400%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     max-width: 900px;
@@ -26,45 +29,81 @@ body {
     display: flex;
     margin: 0 auto;
     flex-direction: row;
-    margin-top: 5%;
+    margin-top: 15%;
     flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .contentbox {
-    background-color: gray;
-    color: rgba(252, 252, 252, 0.753);
-    border: 10px solid black;
-    border-radius: 5%;
-    border-width: 5px;
+    background-color: #ffffff88;
+    box-shadow:rgba(0, 0, 0, 0.507);
+    color: rgba(0, 0, 0);
+    border: solid rgba(255, 255, 255, 0.733);
+    border-radius: 4%;
+    border-width: 3px;
     padding: 20px;
     width: 300px;
-    
+    height: 600px;
+}
+
+.contentbox i {
+    text-align: center;
+    margin-left: 15%;
+    margin-bottom: 10%;
 }
 
 .main-content {
-    color:rgba(252, 252, 252, 0.753);
-    margin-left: 25px;
+    color:rgba(0, 0, 0);
+    margin-left: 2%;
+    width: 60%;
+}
+.main-content p {
+    font-family: 'Fredoka One', cursive;
+    width: 100%;
 }
 .name {
+    font-family: 'Fredoka One', cursive;
     margin: 0px;
 }
 
 .title {
+    font-family: 'Fredoka One', cursive;
     margin-top: 1%;
 }
 
 .about-me h2 {
+    font-family: 'Fredoka One', cursive;
     margin-bottom: 15px;
 }
 
 .about-me-text {
+    font-family: 'Fredoka One', cursive;
     width: 100%;
     margin: 0px;
 }
 
+.btn {
+    color: rgba(0, 0, 0);
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    border-radius: 10px;
+    margin-top: 100px;
+    width: 50%;
+    
+}
+
+.btn:hover {
+    background: #23a6d5;
+}
+
+.btn:active {
+    background: #e73c7e;
+}
 
 
 .main-content h2 {
+    font-family: 'Fredoka One', cursive;
     width: 100%;
 }
 
@@ -74,7 +113,9 @@ body {
 }
 
 footer {
-    color:rgb(252, 252, 252);
+    font-family: 'Fredoka One', cursive;
+    color:rgba(0, 0, 0, 0.699);
+    opacity: 0.25;
     font-size: 18px;
     text-align: center;
     margin-top: auto;
@@ -83,10 +124,34 @@ footer {
 .skill-list {
     margin: 0;
     padding: 0px;
-    border: 1px solid black;
     display: flex;
     flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .skill-list h3 {
-    margin: 20px;
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.skill-list i {
+    margin-right: 0%;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 0px;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
