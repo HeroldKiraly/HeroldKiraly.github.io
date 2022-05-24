@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
+        <title>Portfolio Site</title>
+        
+        <!--METADATA-->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio Site</title>
+        
+        <!--STYLESHEETS-->
         <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-        <link rel="scripts" href="../JS/script.js">
+        
+        <!--JAVASCRIPT-->
         <script src="https://kit.fontawesome.com/ce21308127.js" crossorigin="anonymous"></script>
+        
+        <!--FONTS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
     </head>
+    
     <body>
-        <header>
-        </header>
+        <header></header>
+        
         <div class="main">        
-            <div class="contentbox">
+            
+            <div class="profilebox">
                 <i class="fa-solid fa-frog fa-9x"></i>
-                <h1 class="name">Herold Kiraly</h1>
-                <p class="title">Jr. Front End Developer</p>
-                    <div class="about-me">
+                <h1 class="profilebox-name">Herold Kiraly</h1>
+                <p class="profilebox-title">Jr. Front End Developer</p>
+                    <div class="profilebox-about-me">
                         <h2>About me</h2>
-                        <p class="about-me-text">Hi! I'm Herold, a Jr Front End Developer. I've been programming on and off since 2013 on a hobby level but I decided to take up the challenge and get into learning the skillsets full time. </p>
-                        <button class="btn">Contact Me</button>
+                        <p class="profilebox-about-me-text">Hi! I'm Herold, a Jr Front End Developer. I've been programming on and off since 2013 on a hobby level but I decided to take up the challenge and get into learning the skillsets full time. </p>
+                        <button data-modal-target="#modal" class="btn">Contact Me</button>
                     </div>
             </div>
-        
-            <div class="main-content">
-                <!--
-                <div>
-                    <h2>Social</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Habitant morbi tristique senectus et netus et malesuada fames ac. Feugiat pretium nibh ipsum consequat nisl. Id aliquet risus feugiat in ante metus.</p>
+
+            
+            <div class="modal" id="modal">
+                    <div class="modal-header">
+                    <div class="title">Contact Me</div>
+                    <button data-close-button class="close-button">&times;</button>
                 </div>
-            -->
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit in tempore illo at? Atque natus fugiat illum, hic quasi, repudiandae non eos neque eligendi totam est necessitatibus mollitia laboriosam possimus fugit sunt dolores sequi tempore nobis magni! Est, alias voluptatem.
+                </div>
+            </div>
+            <div id="overlay"></div>        
+
+
+
+            <div class="main-content">
+
                 <div>
                     <h2>Projects</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Habitant morbi tristique senectus et netus et malesuada fames ac. Feugiat pretium nibh ipsum consequat nisl. Id aliquet risus feugiat in ante metus.</p>
@@ -57,9 +76,14 @@
                 </div>
             </div>
         </div>
+        
+
+        
         <footer>
-        <p>HeroldKiraly@2022</p>
+            <p>HeroldKiraly@2022</p>
         </footer>
+        <!--MODAL SCRIPT-->
+        <script src="../JS/script.js"></script>
     </body>
 
     

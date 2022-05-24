@@ -2,14 +2,9 @@
     box-sizing: border-box;
     /*border: 1px solid red;*/
 }
-
 html {
     scroll-behavior: smooth;
     height: 100%;
-}
-
-.contact-me {
-    display: inline-block;
 }
 
 body {
@@ -35,7 +30,8 @@ body {
     justify-content: center;
 }
 
-.contentbox {
+/*LEFT SIDE PROFILE/ABOUT ME CSS*/
+.profilebox {
     background-color: #ffffff88;
     box-shadow:rgba(0, 0, 0, 0.507);
     color: rgba(0, 0, 0);
@@ -46,13 +42,46 @@ body {
     width: 300px;
     height: 600px;
 }
-
-.contentbox i {
+.profilebox i {
     text-align: center;
     margin-left: 15%;
     margin-bottom: 10%;
 }
+.profilebox-name {
+    font-family: 'Fredoka One', cursive;
+    margin: 0px;
+}
+.profilebox-title {
+    font-family: 'Fredoka One', cursive;
+    margin-top: 1%;
+}
+.profilebox-about-me h2 {
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 15px;
+}
+.profilebox-about-me-text {
+    font-family: 'Fredoka One', cursive;
+    width: 100%;
+    margin: 0px;
+}
+/*BUTTON FOR CONTACT ME MODAL*/
+.btn {
+    color: rgba(0, 0, 0);
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    border-radius: 10px;
+    margin-top: 100px;
+    width: 50%; 
+}
+.btn:hover {
+    background: #23a6d5;
+}
+.btn:active {
+    background: #e73c7e;
+}
 
+
+/*MAIN CONTENT RIGHT SIDE TEXT AND INFORMATION*/
 .main-content {
     color:rgba(0, 0, 0);
     margin-left: 2%;
@@ -62,65 +91,12 @@ body {
     font-family: 'Fredoka One', cursive;
     width: 100%;
 }
-.name {
-    font-family: 'Fredoka One', cursive;
-    margin: 0px;
-}
-
-.title {
-    font-family: 'Fredoka One', cursive;
-    margin-top: 1%;
-}
-
-.about-me h2 {
-    font-family: 'Fredoka One', cursive;
-    margin-bottom: 15px;
-}
-
-.about-me-text {
-    font-family: 'Fredoka One', cursive;
-    width: 100%;
-    margin: 0px;
-}
-
-.btn {
-    color: rgba(0, 0, 0);
-    font-family: 'Fredoka One', cursive;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    border-radius: 10px;
-    margin-top: 100px;
-    width: 50%;
-    
-}
-
-.btn:hover {
-    background: #23a6d5;
-}
-
-.btn:active {
-    background: #e73c7e;
-}
-
-
 .main-content h2 {
     font-family: 'Fredoka One', cursive;
     width: 100%;
 }
 
-.contentbox-img {
-    width: 250px; 
-    height: 250px;
-}
-
-footer {
-    font-family: 'Fredoka One', cursive;
-    color:rgba(0, 0, 0, 0.699);
-    opacity: 0.25;
-    font-size: 18px;
-    text-align: center;
-    margin-top: auto;
-}
-
+/*SKILLS LIST ASSETS AND TEXT CSS*/
 .skill-list {
     margin: 0;
     padding: 0px;
@@ -135,7 +111,6 @@ footer {
     margin-top: 2%;
     margin-left: 1%;
 }
-
 .skill-list i {
     margin-right: 0%;
     margin-left: 2%;
@@ -144,6 +119,73 @@ footer {
 
 }
 
+/*MODAL STYLE*/
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-body {
+    padding: 10px 15px;
+}
+#overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/*FOOTER*/
+footer {
+    font-family: 'Fredoka One', cursive;
+    color:rgba(0, 0, 0, 0.699);
+    opacity: 0.25;
+    font-size: 18px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/*ANIMATION KEYFRAMES FOR BACKGROUND*/
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
