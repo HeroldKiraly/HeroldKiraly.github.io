@@ -6,6 +6,9 @@ html {
     scroll-behavior: smooth;
     height: 100%;
 }
+::-webkit-scrollbar {
+    width: 0em;
+}
 
 body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
