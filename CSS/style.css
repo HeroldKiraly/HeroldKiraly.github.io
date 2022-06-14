@@ -1,6 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
 }
 html {
     scroll-behavior: smooth;
@@ -21,16 +21,19 @@ body {
     flex-direction: column;
     margin: 0 auto;
     height: 100%;
+    
 }
 
 .main {
     display: flex;
     margin: 0 auto;
     flex-direction: row;
-    margin-top: 15%;
+    margin-top: 5%;
     flex-flow: wrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 /*LEFT SIDE PROFILE/ABOUT ME CSS*/
@@ -89,6 +92,7 @@ body {
     color:rgba(0, 0, 0);
     margin-left: 2%;
     width: 60%;
+    height: 60%;
 }
 .main-content p {
     font-family: 'Fredoka One', cursive;
@@ -98,6 +102,22 @@ body {
     font-family: 'Fredoka One', cursive;
     width: 100%;
 }
+.main-content details {
+    font-family: 'Fredoka One', cursive;
+    width: 100%;
+}
+.main-content details summary {
+    font-family: 'Fredoka One', cursive;
+    width: 100%;
+}
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+  
+  @keyframes sweep {
+    0%    {opacity: 0; transform: translateY(-10px)}
+    100%  {opacity: 1; transform: translateY(0)}
+  }
 
 /*SKILLS LIST ASSETS AND TEXT CSS*/
 .skill-list {
@@ -220,6 +240,7 @@ footer {
     font-size: 18px;
     text-align: center;
     margin-top: auto;
+    margin-bottom: auto;
 }
 
 /*ANIMATION KEYFRAMES FOR BACKGROUND*/
