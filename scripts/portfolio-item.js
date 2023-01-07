@@ -24,22 +24,16 @@ let portfolioItems = [
         projectURL: 'https://interactive-rating-component-main-weld.vercel.app/'
     },
     {
-        title: 'Finance Account Site',
-        imgURL: './images/.png',
-        stack: ['HTML', 'CSS', 'Python', 'Flask'],
-        projectURL: 'https://interactive-rating-component-main-weld.vercel.app/'
-    },
-    {
         title: 'Ecommerce Site',
-        imgURL: './images/.png',
+        imgURL: './images/watch-ecommerce.png',
         stack: ['HTML', 'React', 'Python', 'Flask'],
-        projectURL: 'https://interactive-rating-component-main-weld.vercel.app/'
+        projectURL: '#section-two'
     },
     {
-        title: 'Reddit Client',
-        imgURL: './images/.png',
-        stack: ['HTML', 'Sass', 'JavaScript', 'React'],
-        projectURL: '#'
+        title: 'Google Search Remake',
+        imgURL: './images/google-search-remake.png',
+        stack: ['HTML', 'CSS'],
+        projectURL: 'https://google-search-remake.vercel.app/'
     },
     {
         title: 'This Website',

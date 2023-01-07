@@ -38,8 +38,7 @@ body::-webkit-scrollbar {
     text-align: center;
     z-index: 1;
     background: inherit;
-    background-color: rgba(255, 255, 255, .25);  
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 5px 10px 30px 10px rgba(0, 0, 0, .25);
     .name {
         font-size: 2rem;
@@ -66,7 +65,6 @@ body::-webkit-scrollbar {
 }
 
 #container-one {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,7 +72,12 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 #container-two {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container-three {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,6 +86,15 @@ body::-webkit-scrollbar {
 #portfolio {
     margin-top: 4rem;
     margin-bottom: 4rem;
+}
+
+hr {
+    width: 7.5rem;
+    height: 0.3rem;
+    background-color:rgba(0, 0, 0, .25);
+    border: 0;
+    margin-top: -1rem;
+    border-radius: 1rem;
 }
 
 .greeting {
@@ -105,7 +117,7 @@ body::-webkit-scrollbar {
         cursor: pointer;
 }
 
-.skills {
+.headers {
     font-size: 1.5rem;
     margin: 1rem 0 1rem 0;
 }
@@ -146,6 +158,22 @@ body::-webkit-scrollbar {
     margin-left: 2%;
     margin-top: 2%;
     padding: 0px;
+}
+
+.certifications {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a {
+        font-weight: 500;
+        outline: 2px solid;
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        margin-right: 0.8rem;
+    }
+    a:hover {
+        background-color:rgba(0, 0, 0, .25);
+    }
 }
 
 .scrollArrow {
@@ -209,6 +237,71 @@ body::-webkit-scrollbar {
         padding: 0.2rem 0.3rem 0.2rem 0.3rem;
         margin-right: 0.8rem;
     }
+}
+
+.contact-form-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 75%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+    .name-input-field, .email-input-field, .message-input-field {
+        border-radius: 0.5rem;
+        height: 2.5rem;
+        background-color:rgba(255, 255, 255, .25);
+        color: black;
+        border: 2px solid black;
+        font-size: 1rem;
+        padding: 1rem;
+        margin: 0.2rem 0 0.2rem 0;
+        font-weight: 600;
+        font-family: inherit;
+    }
+    .name-input-field::placeholder, .email-input-field::placeholder, .message-input-field::placeholder {
+        color: black;
+    }
+    .no-focus:focus {
+        outline: none;
+    }
+    .message-input-field {
+        height: 10rem;
+        resize: none;
+    }
+    i {
+        font-weight: 600;
+    }
+    button {
+        margin: 0.2rem 0 0.2rem 0;
+        border-radius: 0.5rem;
+        height: 2.5rem;
+        width: 15rem;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 600;
+        padding-left: 1rem;
+        border: 2px solid black;
+    }
+    button:hover {
+        background-color:rgba(0, 0, 0, .25);
+        cursor: pointer;
+        color: white;
+        border: 2px solid white;
+    }
+}
+
+footer {
+    font-size: 0.75rem;
+    margin: 1rem;
 }
 
 @keyframes arrow {

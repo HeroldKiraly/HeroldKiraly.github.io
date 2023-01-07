@@ -41,8 +41,6 @@ body::-webkit-scrollbar {
   z-index: 1;
   background: inherit;
   background-color: rgba(255, 255, 255, 0.25);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   box-shadow: 5px 10px 30px 10px rgba(0, 0, 0, 0.25);
 }
 #main .name {
@@ -69,7 +67,6 @@ body::-webkit-scrollbar {
 }
 
 #container-one {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +75,12 @@ body::-webkit-scrollbar {
 }
 
 #container-two {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container-three {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,6 +89,15 @@ body::-webkit-scrollbar {
 #portfolio {
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+hr {
+  width: 7.5rem;
+  height: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 0;
+  margin-top: -1rem;
+  border-radius: 1rem;
 }
 
 .greeting {
@@ -108,7 +119,7 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.skills {
+.headers {
   font-size: 1.5rem;
   margin: 1rem 0 1rem 0;
 }
@@ -149,6 +160,22 @@ body::-webkit-scrollbar {
   margin-left: 2%;
   margin-top: 2%;
   padding: 0px;
+}
+
+.certifications {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.certifications a {
+  font-weight: 500;
+  outline: 2px solid;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+  margin-right: 0.8rem;
+}
+.certifications a:hover {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .scrollArrow {
@@ -213,6 +240,77 @@ body::-webkit-scrollbar {
   border-radius: 0.2rem;
   padding: 0.2rem 0.3rem 0.2rem 0.3rem;
   margin-right: 0.8rem;
+}
+
+.contact-form-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  width: 75%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.contact-form .name-input-field, .contact-form .email-input-field, .contact-form .message-input-field {
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: black;
+  border: 2px solid black;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0.2rem 0 0.2rem 0;
+  font-weight: 600;
+  font-family: inherit;
+}
+.contact-form .name-input-field::-moz-placeholder, .contact-form .email-input-field::-moz-placeholder, .contact-form .message-input-field::-moz-placeholder {
+  color: black;
+}
+.contact-form .name-input-field:-ms-input-placeholder, .contact-form .email-input-field:-ms-input-placeholder, .contact-form .message-input-field:-ms-input-placeholder {
+  color: black;
+}
+.contact-form .name-input-field::placeholder, .contact-form .email-input-field::placeholder, .contact-form .message-input-field::placeholder {
+  color: black;
+}
+.contact-form .no-focus:focus {
+  outline: none;
+}
+.contact-form .message-input-field {
+  height: 10rem;
+  resize: none;
+}
+.contact-form i {
+  font-weight: 600;
+}
+.contact-form button {
+  margin: 0.2rem 0 0.2rem 0;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  width: 15rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  border: 2px solid black;
+}
+.contact-form button:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: white;
+  border: 2px solid white;
+}
+
+footer {
+  font-size: 0.75rem;
+  margin: 1rem;
 }
 
 @-webkit-keyframes arrow {
