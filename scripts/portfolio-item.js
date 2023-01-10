@@ -1,3 +1,6 @@
+import "@babel/register";
+require("@babel/register");
+
 let portfolioItems = [
     {
         title: 'Product Card',
