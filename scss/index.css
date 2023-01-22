@@ -20,7 +20,8 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  background-color: slategrey;
+  background-color: #3D6999;
+  color: black;
 }
 
 body::-webkit-scrollbar {
@@ -71,13 +72,13 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 #container-two {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 
 #container-three {
@@ -87,8 +88,8 @@ body::-webkit-scrollbar {
 }
 
 #portfolio {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 hr {
@@ -122,6 +123,7 @@ hr {
 .headers {
   font-size: 1.5rem;
   margin: 1rem 0 1rem 0;
+  color: black;
 }
 
 .skill-list {
@@ -178,20 +180,6 @@ hr {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.scrollArrow {
-  margin-top: 7rem;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  opacity: 0.6;
-  -webkit-animation: arrow 1s linear 0s infinite alternate;
-          animation: arrow 1s linear 0s infinite alternate;
-}
-.scrollArrow i {
-  margin-top: 0.5rem;
-  font-size: 2rem;
-}
-
 .portfolio-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -207,6 +195,12 @@ hr {
   width: 20rem;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.grid-item:hover {
+  transform: translate(-0.3rem, -0.3ex);
+  box-shadow: black 0.2rem 0.2rem 0rem 0.1rem;
 }
 
 .grid-image {
@@ -313,23 +307,6 @@ footer {
   margin: 1rem;
 }
 
-@-webkit-keyframes arrow {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(0.3rem);
-  }
-}
-
-@keyframes arrow {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(0.3rem);
-  }
-}
 @media (max-width: 768px) {
   .portfolio-grid-container {
     grid-template-columns: repeat(1, 1fr);

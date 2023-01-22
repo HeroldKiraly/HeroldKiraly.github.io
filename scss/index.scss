@@ -1,3 +1,6 @@
+$background-color: #3D6999;
+$primary-color: black;
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -20,7 +23,8 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100%;
-    background-color: slategrey;
+    background-color: $background-color;
+    color: $primary-color;
 }
 
 body::-webkit-scrollbar {
@@ -56,7 +60,7 @@ body::-webkit-scrollbar {
     }
     a {
         text-decoration: none;
-        color: black;
+        color: $primary-color;
         i {
             padding: 0 0.5rem 0 0.5rem;
             margin-top: 0.5rem;
@@ -69,12 +73,14 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+
 }
+
 #container-two {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
 }
 
 #container-three {
@@ -84,8 +90,8 @@ body::-webkit-scrollbar {
 }
 
 #portfolio {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 hr {
@@ -113,13 +119,14 @@ hr {
 }
 
 .link-ico:hover {
-        opacity: 0.7;
-        cursor: pointer;
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .headers {
     font-size: 1.5rem;
     margin: 1rem 0 1rem 0;
+    color: $primary-color;
 }
 
 .skill-list {
@@ -176,19 +183,6 @@ hr {
     }
 }
 
-.scrollArrow {
-    margin-top: 7rem;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    opacity: 0.6;
-    animation: arrow 1s linear 0s infinite alternate;
-    i {
-        margin-top: 0.5rem;
-        font-size: 2rem;
-    }
-}
-
 .portfolio-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -198,12 +192,18 @@ hr {
 
 .grid-item {
     text-decoration: none;
-    color: black;
+    color: $primary-color;
     outline: 2px solid;
     height: 16rem;
     width: 20rem;
     background-color: rgba(255, 255, 255, .30);
     border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.grid-item:hover { 
+    transform: translate(-0.3rem, -0.3ex);
+    box-shadow: black 0.2rem 0.2rem 0rem 0.1rem;
 }
 
 .grid-image {
@@ -259,8 +259,8 @@ hr {
         border-radius: 0.5rem;
         height: 2.5rem;
         background-color:rgba(255, 255, 255, .25);
-        color: black;
-        border: 2px solid black;
+        color: $primary-color;
+        border: 2px solid $primary-color;
         font-size: 1rem;
         padding: 1rem;
         margin: 0.2rem 0 0.2rem 0;
@@ -268,7 +268,7 @@ hr {
         font-family: inherit;
     }
     .name-input-field::placeholder, .email-input-field::placeholder, .message-input-field::placeholder {
-        color: black;
+        color: $primary-color;
     }
     .no-focus:focus {
         outline: none;
@@ -289,7 +289,7 @@ hr {
         font-size: 1rem;
         font-weight: 600;
         padding-left: 1rem;
-        border: 2px solid black;
+        border: 2px solid $primary-color;
     }
     button:hover {
         background-color:rgba(0, 0, 0, .25);
@@ -302,11 +302,6 @@ hr {
 footer {
     font-size: 0.75rem;
     margin: 1rem;
-}
-
-@keyframes arrow {
-    from { transform: translateY(0px); }
-    to { transform: translateY(0.3rem); }
 }
 
 @media (max-width: 768px) {

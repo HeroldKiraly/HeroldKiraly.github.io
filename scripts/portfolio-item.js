@@ -12,6 +12,12 @@ let portfolioItems = [
         projectURL: 'https://tip-calculator-app-main-gilt.vercel.app/'
     },
     {
+        title: 'Multi Step Form',
+        imgURL: './images/multi-step-form-desktop.png',
+        stack: ['Vite', 'React', 'JavaScript'],
+        projectURL: 'https://multi-step-form-main-six.vercel.app/'
+    },
+    {
         title: 'Advice Generator',
         imgURL: './images/advice-generator-desktop.png',
         stack: ['HTML', 'CSS', 'JavaScript', 'API'],
