@@ -194,7 +194,7 @@ hr {
     text-decoration: none;
     color: $primary-color;
     outline: 2px solid;
-    height: 16rem;
+    height: auto;
     width: 20rem;
     background-color: rgba(255, 255, 255, .30);
     border-radius: 0.5rem;
@@ -219,8 +219,7 @@ hr {
 }
 
 .grid-item-info {
-    margin-left: 1rem;
-    width: 100%;
+    margin: 0 1rem 0 1rem;
     h4 {
         font-size: 1.3rem;
         margin: 0.5rem 0rem 0.5rem 0rem;
@@ -236,6 +235,28 @@ hr {
         border-radius: 0.2rem;
         padding: 0.2rem 0.3rem 0.2rem 0.3rem;
         margin-right: 0.8rem;
+    }
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 1rem 0;
+    .links {
+        font-size: 1rem;
+        text-align: center;
+        width: 8.5rem;
+        font-weight: 500;
+        outline: 2px solid;
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        i {
+          margin-right: 0.2rem;  
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 }
 
