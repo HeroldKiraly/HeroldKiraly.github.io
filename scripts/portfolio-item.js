@@ -4,60 +4,68 @@ let portfolioItems = [
         imgURL: './images/product-preview-card-desktop.png',
         stack: ['HTML', 'CSS', 'JavaScript'],
         projectURL: 'https://product-preview-card-component-main-three.vercel.app/',
-        githubURL: 'https://github.com/HeroldKiraly/product-preview-card-component-main'
+        githubURL: 'https://github.com/HeroldKiraly/product-preview-card-component-main',
+        wip: false,
     },
     {
         title: 'Tip Splitter App',
         imgURL: './images/tip-calculator-desktop.png',
         stack: ['HTML', 'CSS', 'JavaScript'],
         projectURL: 'https://tip-calculator-app-main-gilt.vercel.app/',
-        githubURL: 'https://github.com/HeroldKiraly/tip-calculator-app-main'
+        githubURL: 'https://github.com/HeroldKiraly/tip-calculator-app-main',
+        wip: false,
     },
     {
         title: 'Multi Step Form',
         imgURL: './images/multi-step-form-desktop.png',
         stack: ['Vite', 'React', 'JavaScript'],
         projectURL: 'https://multi-step-form-main-six.vercel.app/',
-        githubURL: 'https://github.com/HeroldKiraly/multi-step-form-main'
+        githubURL: 'https://github.com/HeroldKiraly/multi-step-form-main',
+        wip: true,
     },
     {
         title: 'Advice Generator',
         imgURL: './images/advice-generator-desktop.png',
         stack: ['HTML', 'CSS', 'JavaScript', 'API'],
         projectURL: 'https://advice-generator-app-main-wheat.vercel.app/',
-        githubURL: 'https://github.com/HeroldKiraly/advice-generator-app-main'
+        githubURL: 'https://github.com/HeroldKiraly/advice-generator-app-main',
+        wip: false,
     },
     {
         title: 'Rating Component',
         imgURL: './images/interactive-rating-desktop.png',
         stack: ['HTML', 'CSS', 'JavaScript'],
         projectURL: 'https://interactive-rating-component-main-weld.vercel.app/',
-        githubURL: 'https://github.com/HeroldKiraly/interactive-rating-component-main'
+        githubURL: 'https://github.com/HeroldKiraly/interactive-rating-component-main',
+        wip: false,
     },
     {
         title: 'Ecommerce Site',
         imgURL: './images/watch-ecommerce.png',
         stack: ['HTML', 'React', 'Python', 'Flask'],
         projectURL: '#section-two',
-        githubURL: '#'
+        githubURL: '#',
+        wip: true,
     },
     {
         title: 'Google Search Remake',
         imgURL: './images/google-search-remake.png',
         stack: ['HTML', 'CSS'],
         projectURL: 'https://google-search-remake.vercel.app/',
-        githubURL: 'https://github.com/HeroldKiraly/google-search-remake'
+        githubURL: 'https://github.com/HeroldKiraly/google-search-remake',
+        wip: false,
     },
     {
         title: 'This Website',
         imgURL: './images/my-portfolio-desktop.png',
         stack: ['HTML', 'Sass', 'JavaScript', 'React'],
         projectURL: '#',
-        githubURL: 'https://github.com/HeroldKiraly/HeroldKiraly.github.io'
+        githubURL: 'https://github.com/HeroldKiraly/HeroldKiraly.github.io',
+        wip: true,
     },
 ];
 
-const PortfolioItem = ({title, imgURL, stack, projectURL, githubURL}) => {
+const PortfolioItem = ({title, imgURL, stack, projectURL, githubURL, wip}) => {
     return (
         <div className="grid-item" href="#">
             <div className="grid-image">
@@ -66,7 +74,7 @@ const PortfolioItem = ({title, imgURL, stack, projectURL, githubURL}) => {
                 </a>
             </div>
             <div className="grid-item-info">
-                <h4>{title}</h4>
+                <h4>{title}{wip ? <span>*</span> : <span></span>}</h4>
                 <div className="stack-container">
                     {stack.map(stackItem => (
                         <p className="tech-stack">{stackItem}</p>
@@ -91,6 +99,7 @@ const Portfolio = () => {
                     stack={item.stack}
                     projectURL={item.projectURL}
                     githubURL={item.githubURL}
+                    wip={item.wip}
                 />
             ))}
         </div>
