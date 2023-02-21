@@ -58,7 +58,7 @@ let portfolioItems = [
     {
         title: 'Web3 dApp',
         imgURL: './images/web3-dapp.webp',
-        stack: ['NextJS', 'ReactJS', 'TailwindCSS', 'Moralis'],
+        stack: ['NextJS', 'TailwindCSS', 'Moralis'],
         projectURL: '#',
         githubURL: 'https://github.com/HeroldKiraly/web3-dapp',
         wip: true,
