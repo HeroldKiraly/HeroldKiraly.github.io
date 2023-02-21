@@ -1,7 +1,7 @@
 let portfolioItems = [
     {
         title: 'Product Card',
-        imgURL: './images/product-preview-card-desktop.png',
+        imgURL: './images/product-preview-card-desktop.webp',
         stack: ['HTML', 'CSS', 'JavaScript'],
         projectURL: 'https://product-preview-card-component-main-three.vercel.app/',
         githubURL: 'https://github.com/HeroldKiraly/product-preview-card-component-main',
@@ -9,7 +9,7 @@ let portfolioItems = [
     },
     {
         title: 'Tip Splitter App',
-        imgURL: './images/tip-calculator-desktop.png',
+        imgURL: './images/tip-calculator-desktop.webp',
         stack: ['HTML', 'CSS', 'JavaScript'],
         projectURL: 'https://tip-calculator-app-main-gilt.vercel.app/',
         githubURL: 'https://github.com/HeroldKiraly/tip-calculator-app-main',
@@ -17,7 +17,7 @@ let portfolioItems = [
     },
     {
         title: 'Multi Step Form',
-        imgURL: './images/multi-step-form-desktop.png',
+        imgURL: './images/multi-step-form-desktop.webp',
         stack: ['Vite', 'React', 'JavaScript'],
         projectURL: 'https://multi-step-form-main-six.vercel.app/',
         githubURL: 'https://github.com/HeroldKiraly/multi-step-form-main',
@@ -25,7 +25,7 @@ let portfolioItems = [
     },
     {
         title: 'Advice Generator',
-        imgURL: './images/advice-generator-desktop.png',
+        imgURL: './images/advice-generator-desktop.webp',
         stack: ['HTML', 'CSS', 'JavaScript', 'API'],
         projectURL: 'https://advice-generator-app-main-wheat.vercel.app/',
         githubURL: 'https://github.com/HeroldKiraly/advice-generator-app-main',
@@ -33,7 +33,7 @@ let portfolioItems = [
     },
     {
         title: 'Rating Component',
-        imgURL: './images/interactive-rating-desktop.png',
+        imgURL: './images/interactive-rating-desktop.webp',
         stack: ['HTML', 'CSS', 'JavaScript'],
         projectURL: 'https://interactive-rating-component-main-weld.vercel.app/',
         githubURL: 'https://github.com/HeroldKiraly/interactive-rating-component-main',
@@ -41,7 +41,7 @@ let portfolioItems = [
     },
     {
         title: 'Ecommerce Site',
-        imgURL: './images/watch-ecommerce.png',
+        imgURL: './images/watch-ecommerce.webp',
         stack: ['HTML', 'React', 'Python', 'Flask'],
         projectURL: '#section-two',
         githubURL: '#',
@@ -49,7 +49,7 @@ let portfolioItems = [
     },
     {
         title: 'Google Search Remake',
-        imgURL: './images/google-search-remake.png',
+        imgURL: './images/google-search-remake.webp',
         stack: ['HTML', 'CSS'],
         projectURL: 'https://google-search-remake.vercel.app/',
         githubURL: 'https://github.com/HeroldKiraly/google-search-remake',
@@ -57,7 +57,7 @@ let portfolioItems = [
     },
     {
         title: 'This Website',
-        imgURL: './images/my-portfolio-desktop.png',
+        imgURL: './images/my-portfolio-desktop.webp',
         stack: ['HTML', 'Sass', 'JavaScript', 'React'],
         projectURL: '#',
         githubURL: 'https://github.com/HeroldKiraly/HeroldKiraly.github.io',
@@ -70,7 +70,7 @@ const PortfolioItem = ({title, imgURL, stack, projectURL, githubURL, wip}) => {
         <div className="grid-item" href="#">
             <div className="grid-image">
                 <a href={projectURL}>
-                    <img src={imgURL} alt="Portfolio project image"/>
+                    <img src={imgURL} loading="lazy" alt="Portfolio project image"/>
                 </a>
             </div>
             <div className="grid-item-info">
