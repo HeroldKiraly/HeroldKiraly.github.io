@@ -70,7 +70,7 @@ const PortfolioItem = ({title, imgURL, stack, projectURL, githubURL, wip}) => {
         <div className="grid-item" href="#">
             <div className="grid-image">
                 <a href={projectURL}>
-                    <img src={imgURL} />
+                    <img src={imgURL} alt="Portfolio project image"/>
                 </a>
             </div>
             <div className="grid-item-info">
