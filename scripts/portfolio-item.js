@@ -40,6 +40,14 @@ let portfolioItems = [
         wip: false,
     },
     {
+        title: 'Google Search Remake',
+        imgURL: './images/google-search-remake.webp',
+        stack: ['HTML', 'CSS'],
+        projectURL: 'https://google-search-remake.vercel.app/',
+        githubURL: 'https://github.com/HeroldKiraly/google-search-remake',
+        wip: false,
+    },
+    {
         title: 'Ecommerce Site',
         imgURL: './images/watch-ecommerce.webp',
         stack: ['HTML', 'React', 'Python', 'Flask'],
@@ -48,12 +56,12 @@ let portfolioItems = [
         wip: true,
     },
     {
-        title: 'Google Search Remake',
-        imgURL: './images/google-search-remake.webp',
-        stack: ['HTML', 'CSS'],
-        projectURL: 'https://google-search-remake.vercel.app/',
-        githubURL: 'https://github.com/HeroldKiraly/google-search-remake',
-        wip: false,
+        title: 'Web3 dApp',
+        imgURL: './images/web3-dapp.webp',
+        stack: ['NextJS', 'ReactJS', 'TailwindCSS', 'Moralis'],
+        projectURL: '#',
+        githubURL: 'https://github.com/HeroldKiraly/web3-dapp',
+        wip: true,
     },
     {
         title: 'This Website',
