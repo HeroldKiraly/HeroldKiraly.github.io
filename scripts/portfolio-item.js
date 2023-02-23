@@ -52,7 +52,7 @@ let portfolioItems = [
         imgURL: './images/watch-ecommerce.webp',
         stack: ['HTML', 'React', 'Python', 'Flask'],
         projectURL: '#section-two',
-        githubURL: '#',
+        githubURL: 'https://github.com/HeroldKiraly/final-project-harvardCS',
         wip: true,
     },
     {
