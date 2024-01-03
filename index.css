@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    font-family: Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    font-size: 1rem;
+    max-width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: stretch;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+.navigation-bar {
+    width: 15rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-height: 100vh;
+    position: sticky;
+    top: 0px;
+}
+.nav-col {
+    background-color: #fafafa;
+    width: 100%;
+    border-right: 1px solid #eeeeeeee;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    overflow: auto;
+    font-size: 0.8rem;
+    position: relative;
+}
+.nav-col > h2 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    opacity: 0.6;
+}
+.nav-col > a {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    font-size: 0.85rem;
+}
+.nav-button {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.nav-button:hover {
+    outline: 1px solid lightgray;
+    background-color: lightgray;
+    cursor: pointer;
+}
+iframe {
+    border-radius: 0.5rem;
+}
+.active {
+    background-color: black !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+    .nav-column {
+        width: 200px;
+    }
+}
+
+.main-body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16rem;
+    height: 100vh;
+    max-width: 100%;
+}
+.content {
+    padding-top: 1.1rem;
+    word-break: break-word;
+    max-width: 100%;
+    display: block;
+    height: 100vh;
+}
+
+.contents {
+    max-width: 700px;
+    margin: 8rem auto;
+    padding: 0px 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.artl {
+    display: flex;
+    gap: 1rem;
+    margin: 4rem auto;
+}
+.artl > div {
+    flex-grow: 1;
+}
+.artl > div p {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.content-heading {
+    font-weight: 600;
+    font-size: 1.4rem;
+    flex-basis: 100px;
+    text-align: right;
+    opacity: 0.3;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.content-text {
+    width: 30rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}

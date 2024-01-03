@@ -1,150 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Herold L. Kiraly | An Introduction</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
-    <!-- SEO -->
-    <meta name="description" content="Herold Kiralys portfolio website and contact form">
-    <!-- META -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="/scss/index.css">
-    <!-- SCRIPTS JS -->
-    <script src="/scripts/greeting.js" defer></script>
-    <!-- FONTS -->
-    <script src="https://kit.fontawesome.com/ce21308127.js" crossorigin="anonymous" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" defer>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin defer>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" defer>
-    <!-- React JS -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin defer></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin defer></script>
-    <!-- Babel/JSX -->
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
-    <script src="/scripts/portfolio-item.js" type="text/babel" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Herold Kiraly</title>
+    <script src="https://kit.fontawesome.com/ce21308127.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main>
-        <div id="container-one">
-            <div class="greet-container">
-                <h1 id="greeting" class="greeting"></h1>
-            </div>
-            <div id="main">
-                <h1 class="name">Herold L. Kiraly</h1>
-                
-                <h2 class="about-tags">Developer | Entrepreneur | Adventure Seeker | Car Enthusiast</h3>
-                
-                <a href="https://github.com/HeroldKiraly" name="github" target="_blank"><i class="link-ico fa-brands fa-github"></i></a>
-                <a href="https://twitter.com/KiralyHerold" name="twitter" target="_blank"><i class="link-ico fa-brands fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/herold-kiraly-55b908260/" name="linkedin" target="_blank"><i class="link-ico fa-brands fa-linkedin"></i></a>
-
-                    <h3 class="about">Hi, I have always been fascinated by technology and have decided to pursue a career as a software engineer, something I've dabbled in as a hobby in the past. I have spent the past couple of years working in B2C sales and business management, where I've gained experience working directly with clients to ensure that jobs were completed on time and to their standards. In early 2021, I decided to take a break for a career change and spent the past two years learning and exploring new interests.</h3>
-                <h3 class="skills headers">Skills</h3>
-                
-                <div class="skill-list">
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-html5 fa-2x"></i>
-                        <h3>HTML</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-css3-alt fa-2x"></i>
-                        <h3>CSS</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-sass fa-2x"></i>
-                        <h3>Sass</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-js-square fa-2x"></i>
-                        <h3>JavaScript</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-git-alt fa-2x"></i>
-                        <h3>GIT</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-github fa-2x"></i>
-                        <h3>GitHub</h3>                        
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-react fa-2x"></i>
-                        <h3>React</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-npm fa-2x"></i>
-                        <h3>Npm</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-c fa-2x"></i>
-                        <h3>lang</h3>                        
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-python fa-2x"></i>
-                        <h3>Python</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-php fa-2x"></i>
-                        <h3>php</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-solid fa-database fa-2x"></i>
-                        <h3>MySQL</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-solid fa-server fa-2x"></i>
-                        <h3>Flask</h3>
-                    </div>
-                    <div class="skill-list-item">
-                        <i class="fa-brands fa-unity fa-2x"></i>
-                        <h3>Unity</h3>
-                    </div>
-                </div>
-
-                <h3 class="headers">Certifications & Resume</h3>
-                <div class="certifications">
-                    <a href="/document/CS50x.pdf" target="_blank">CS50X Harvard</a>
-                    <a href="/document/CS50T.pdf" target="_blank">CS50T Harvard</a>
-                    <a href="#" target="_blank">Codecademy Certifications</a>
-                    <a href="/document/heroldKresume.pdf" target="_blank">Resume</a>
-                </div>
-            </div>
-    
-            <!-- <a href="#section-two" style="color: inherit; text-decoration: none;">
-                <div class="scrollArrow">
-                    <p>Portfolio</p>
-                    <i class="fa-solid fa-arrow-down"></i>
-                </div>
-            </a> -->
+    <section class="navigation-bar">
+        <div class="nav-col">
+            <h3>Herold Kiraly</h2>
+            <a class="nav-button active"><i class="fa-solid fa-house"></i> Home</a>
+            <a class="nav-button"><i class="fa-solid fa-rss"></i> BlueSky Feed</a>
+            <a class="nav-button"><i class="fa-solid fa-book"></i> Books & Films</a>
+            <h2>Current Work</h2>
+            <a class="nav-button">Kiraly Group LLC</a>
+            <h2>Past Work</h2>
+            <a class="nav-button">Reno Kings LLC</a>
+            <a class="nav-button">Nperor LLC</a>
+            <h2>Socials</h2>
+            <a class="nav-button"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a class="nav-button"><i class="fa-solid fa-dove"></i> BlueSky</a>
+            <a class="nav-button"><i class="fa-brands fa-mastodon"></i> Mastadon</a>
         </div>
-        
-        <div id="container-two">
-            <h3 class="headers">Portfolio</h3>
-            <hr>
-            <div id="portfolio">
-                <div id="portfolio-root" class="portfolio-grid-container">
-                    <!-- Injected By React -->
+    </section>
+    <section class="main-body">
+        <div class="content">
+            <div class="contents">
+                <div class="artl">
+                    <h2 class="content-heading"></h2>
+                    <div>
+                        <p class="content-text">Hi! I'm Herold Kiraly. I own and operate <a href="">Kiraly Group</a> for majority of my time. I do love programming and just coming up with creative solutions to problems. This website is primarily for the latter, to share what I am working on, what I am reading, and just everything else in-between.</p>
+                        <p class="content-text">Before all this I have also operated Nperor LLC & Reno Kings LLC. Small independent companies, one being in the Ecommerce space the other in the home renovation construction industry.</p>
+                        <p>I also have a Pug <i class="fa-solid fa-dog"></i></p>
+                    </div>
                 </div>
-            </div>
-            <h4 class="star-note">* : work in progress</h4>
-        </div>
-        
-        <div id="container-three">
-            <div class="contact-form-container">
-                <h3 class="headers">Contact me</h3>
-                <hr>
-                <form class="contact-form" action="https://getform.io/f/b8749b92-ec93-4f10-8aa6-50dc3ccf7180" method="POST">
-                    <input class="name-input-field no-focus" type="text" name="name" placeholder="Name">
-                    <input class="email-input-field no-focus" type="text" name="email" placeholder="Email">
-                    <textarea class="message-input-field no-focus" rows="10" type="text" name="message" placeholder="Message"></textarea>
-                    <button type="submit"><i class="fa-regular fa-envelope"></i> Submit</button>
-                </form>
+                <div class="artl">
+                    <h2 class="content-heading">Where</h2>
+                    <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=300&amp;hl=en&amp;q=USA+(Tri-State)&amp;t=&amp;z=4&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Find Population on Map</a></iframe></div>
+                    <!-- <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio cupiditate saepe quidem sequi. Unde atque obcaecati accusamus doloremque neque possimus tempora aliquam explicabo consequuntur sint ipsa beatae nesciunt, in voluptatibus expedita necessitatibus pariatur iusto?</p> -->
+                </div>
+                <!-- <div class="artl">
+                    <h2 class="content-heading">Why</h2>
+                    <p class="content-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptatem aspernatur animi non ratione quam nobis sapiente, optio voluptatibus labore. Minus saepe ipsum est modi quibusdam? Ducimus culpa commodi vel delectus! Natus itaque repellendus fugiat?</p>
+                </div> -->
             </div>
         </div>
-    </main>
-    <footer>
-        <p>@ 2023 Herold Levente Kiraly. All rights reserved.</p>
-    </footer>
+    </section>
 </body>
 </html>
