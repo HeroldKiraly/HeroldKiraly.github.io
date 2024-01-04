@@ -8,12 +8,55 @@
     <script src="https://kit.fontawesome.com/ce21308127.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <script>
+        const pageLoader = (buttonID) => {
+            // Buttons
+            var homeButton = document.getElementById('home-button');
+            var booksButton = document.getElementById('books-button');
+            var skyFeedButton = document.getElementById('sky-feed-button');
+            // Page Contents
+            var home = document.getElementById('main-content-load');
+            var books = document.getElementById('books-films-load');
+            var skyFeed = document.getElementById('bluesky-feed-load');
+            var buttonID;
+            if(buttonID === 1) {
+                // Button Appern
+                skyFeedButton.classList.remove('active');
+                booksButton.classList.remove('active');
+                homeButton.classList.add('active');
+                // Page Loading / Unloading
+                home.style.display = 'block';
+                books.style.display = 'none';
+                skyFeed.style.display = 'none';
+            }
+            else if (buttonID === 2) {
+                // Button Appern
+                homeButton.classList.remove('active');
+                booksButton.classList.remove('active');
+                skyFeedButton.classList.add('active');
+                // Page Loading / Unloading
+                home.style.display = 'none';
+                books.style.display = 'none';
+                skyFeed.style.display = 'block';
+            }
+            else if (buttonID === 3) {
+                // Button Appern
+                homeButton.classList.remove('active');
+                skyFeedButton.classList.remove('active');
+                booksButton.classList.add('active');
+                // Page Loading / Unloading
+                home.style.display = 'none';
+                books.style.display = 'block';
+                skyFeed.style.display = 'none';
+            }
+        }
+    </script>
     <section class="navigation-bar">
         <div class="nav-col">
             <h3>Herold Kiraly</h2>
-            <a class="nav-button active"><i class="fa-solid fa-house"></i> Home</a>
-            <a class="nav-button"><i class="fa-solid fa-rss"></i> BlueSky Feed</a>
-            <a class="nav-button" href="https://heroldkiraly.github.io/books.html"><i class="fa-solid fa-book"></i> Books & Films</a>
+            <a id="home-button" class="nav-button active" onclick="pageLoader(1)"><i class="fa-solid fa-house"></i> Home</a>
+            <a id="sky-feed-button" class="nav-button" onclick="pageLoader(2)"><i class="fa-solid fa-rss"></i> BlueSky Feed</a>
+            <a id="books-button" class="nav-button" onclick="pageLoader(3)"><i class="fa-solid fa-book"></i> Books & Films</a>
             <h2>Current Work</h2>
             <a class="nav-button">Kiraly Group LLC</a>
             <h2>Past Work</h2>
@@ -27,13 +70,13 @@
     </section>
     <section class="main-body">
         <div class="content">
-            <div class="contents">
+            <div id="main-content-load" style="display: block;" class="contents">
                 <div class="artl">
                     <h2 class="content-heading"></h2>
                     <div>
                         <p class="content-text">Hi! I'm Herold Kiraly. I own and operate <a href="">Kiraly Group</a> for majority of my time. I do love programming and just coming up with creative solutions to problems. This website is primarily for the latter, to share what I am working on, what I am reading, and just everything else in-between.</p>
                         <p class="content-text">Before all this I have also operated Nperor LLC & Reno Kings LLC. Small independent companies, one being in the Ecommerce space the other in the home renovation construction industry.</p>
-                        <p>I also have a Pug <i class="fa-solid fa-dog"></i></p>
+                        <p>I also have a Pug 🐕</p>
                     </div>
                 </div>
                 <div class="artl">
@@ -45,6 +88,24 @@
                     <h2 class="content-heading">Why</h2>
                     <p class="content-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptatem aspernatur animi non ratione quam nobis sapiente, optio voluptatibus labore. Minus saepe ipsum est modi quibusdam? Ducimus culpa commodi vel delectus! Natus itaque repellendus fugiat?</p>
                 </div> -->
+            </div>
+            <div id="books-films-load" style="display: none;" class="contents">
+                <div class="artl">
+                    <h2 class="content-heading">Books</h2>
+                    <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/books.txt"></iframe></div>
+                    <!-- <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio cupiditate saepe quidem sequi. Unde atque obcaecati accusamus doloremque neque possimus tempora aliquam explicabo consequuntur sint ipsa beatae nesciunt, in voluptatibus expedita necessitatibus pariatur iusto?</p> -->
+                </div>
+                <div class="artl">
+                    <h2 class="content-heading">Films</h2>
+                    <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/films.txt"></iframe></div>
+                    <!-- <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio cupiditate saepe quidem sequi. Unde atque obcaecati accusamus doloremque neque possimus tempora aliquam explicabo consequuntur sint ipsa beatae nesciunt, in voluptatibus expedita necessitatibus pariatur iusto?</p> -->
+                </div>
+            </div>
+            <div id="bluesky-feed-load" style="display: none;" class="contents">
+                <div class="artl">
+                    <h2 class="content-heading">Posts</h2>
+                    <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/books.txt"></iframe></div>
+                </div>
             </div>
         </div>
     </section>
