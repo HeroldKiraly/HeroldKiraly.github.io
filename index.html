@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Herold Kiraly</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icon.ico">
+    <title>Herold K.</title>
     <script src="https://kit.fontawesome.com/ce21308127.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,6 +29,8 @@
                 home.style.display = 'block';
                 books.style.display = 'none';
                 skyFeed.style.display = 'none';
+                // Set Window Hash
+                location.hash = "home"
             }
             else if (buttonID === 2) {
                 // Button Appern
@@ -38,6 +41,8 @@
                 home.style.display = 'none';
                 books.style.display = 'none';
                 skyFeed.style.display = 'block';
+                // Set Window Hash
+                location.hash = "skyfeed" 
             }
             else if (buttonID === 3) {
                 // Button Appern
@@ -53,19 +58,21 @@
     </script>
     <section class="navigation-bar">
         <div class="nav-col">
-            <h3>Herold Kiraly</h2>
-            <a id="home-button" class="nav-button active" onclick="pageLoader(1)"><i class="fa-solid fa-house"></i> Home</a>
-            <a id="sky-feed-button" class="nav-button" onclick="pageLoader(2)"><i class="fa-solid fa-rss"></i> BlueSky Feed</a>
-            <a id="books-button" class="nav-button" onclick="pageLoader(3)"><i class="fa-solid fa-book"></i> Books & Films</a>
+            <h3>Herold Levente Kiraly</h2>
+            <a id="home-button" class="nav-button active" onclick="pageLoader(1)"><span><i class="fa-solid fa-house"></i> Home</span></a>
+            <a id="sky-feed-button" class="nav-button" onclick="pageLoader(2)"><span><i class="fa-solid fa-rss"></i> BlueSky Feed</span></a>
+            <a id="books-button" class="nav-button" onclick="pageLoader(3)"><span><i class="fa-solid fa-book"></i> Books & Films</span></a>
             <h2>Current Work</h2>
-            <a class="nav-button">Kiraly Group LLC</a>
+            <a class="nav-button"><span class="work-span"><img class="logo-icon" src="./assets/kg-icon.png">Kiraly Group LLC</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             <h2>Past Work</h2>
-            <a class="nav-button">Reno Kings LLC</a>
-            <a class="nav-button">Nperor LLC</a>
+            <a class="nav-button non-active">Reno Kings LLC</a>
+            <a class="nav-button non-active">Nperor LLC</a>
+            <a class="nav-button non-active">RobotWalrus Studios</a>
             <h2>Socials</h2>
-            <a class="nav-button" href="https://github.com/HeroldKiraly" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a class="nav-button" href="https://bsky.app/profile/heroldkiraly.bsky.social" target="_blank"><i class="fa-solid fa-dove"></i> BlueSky</a>
-            <a class="nav-button" href="https://mastodon.social/explore" target="_blank"><i class="fa-brands fa-mastodon"></i> Mastodon</a>
+            <a class="nav-button" href="https://github.com/HeroldKiraly" target="_blank"><span><i class="fa-brands fa-github"></i> GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a class="nav-button" href="https://bsky.app/profile/heroldkiraly.bsky.social" target="_blank"><span><i class="fa-solid fa-dove"></i> BlueSky</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a class="nav-button" href="https://mastodon.social/@heroldkiraly" target="_blank"><span><i class="fa-brands fa-mastodon"></i> Mastodon</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a class="nav-button" href="mailto:kiraly-h@pm.me" target="_blank"><span><i class="fa-solid fa-envelope"></i> kiraly-h@pm.me</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
     </section>
     <section class="main-body">
@@ -104,7 +111,7 @@
             <div id="bluesky-feed-load" style="display: none;" class="contents">
                 <div class="artl">
                     <h2 class="content-heading">Posts</h2>
-                    <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/books.txt"></iframe></div>
+                    <!-- <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="500" frameborder="1" scrolling="yes" marginheight="25" marginwidth="19" src="https://multi-step-form-main-six.vercel.app/"></iframe></div> -->
                 </div>
             </div>
         </div>
