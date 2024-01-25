@@ -60,14 +60,13 @@
     <script>
         $(document).ready(function() {
             // URL of the RSS feed
-            // var rssFeedUrl = 'https://openrss.org/bsky.app/profile/heroldkiraly.bsky.social';
-            var rssFeedUrl = 'https://bsky.app/profile/heroldkiraly.bsky.social';
+            var rssFeedUrl = 'https://openrss.org/bsky.app/profile/heroldkiraly.bsky.social';
         
             // Fetch the RSS feed using AJAX
             $.ajax({
                 url: 'https://api.rss2json.com/v1/api.json',
                 method: 'GET',
-                dataType: 'json',
+                dataType: 'xml',
                 data: {
                     rss_url: rssFeedUrl
                 },
