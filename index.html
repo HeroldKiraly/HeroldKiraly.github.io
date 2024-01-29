@@ -85,7 +85,12 @@
         
                     for (var i = 0; i < feedItems.length; i++) {
                     var item = feedItems[i];
-                    feedContainer.append('<p>' + item.title + '</p>');
+                    feedContainer.append(
+                        '<div class="artl">' +
+                            '<h2 class="content-heading">' + item.pubDate + '</h2>' +
+                            '<p class="content-text">'+ item.title +'</p>' +                
+                        '</div>'
+                    );
                     }
                 }
             });
@@ -146,11 +151,7 @@
                 </div>
             </div>
             <div id="skyfeed-content" style="display: none;" class="contents">
-                <div class="artl">
-                    <h2 class="content-heading">Posts</h2>
-                    <div id="rss-feed" class="content-text"></div>                 
-                    <!-- <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="500" frameborder="1" scrolling="yes" marginheight="25" marginwidth="19" src="https://multi-step-form-main-six.vercel.app/"></iframe></div> -->
-                </div>
+                <div id="rss-feed" class="content-text"></div>
             </div>
         </div>
     </section>
