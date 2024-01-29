@@ -11,49 +11,56 @@
 </head>
 <body>
     <script>
-        const pageLoader = (buttonID) => {
+        window.onload = (event) => {
+            currentHash = location.hash.substring(1);
+            console.log(currentHash);
+            console.log(`page is fully loaded with hash ${currentHash}`);
+            pageLoader(currentHash);
+        };
+    </script>
+    <script>
+        const pageLoader = (pageID) => {
             // Buttons
             var homeButton = document.getElementById('home-button');
             var booksButton = document.getElementById('books-button');
-            var skyFeedButton = document.getElementById('sky-feed-button');
+            var skyFeedButton = document.getElementById('skyfeed-button');
+            
+            skyFeedButton.classList.remove('active');
+            booksButton.classList.remove('active');
+            homeButton.classList.remove('active');
+            
             // Page Contents
-            var home = document.getElementById('main-content-load');
-            var books = document.getElementById('books-films-load');
-            var skyFeed = document.getElementById('bluesky-feed-load');
-            var buttonID;
-            if(buttonID === 1) {
+            var home = document.getElementById('home-content');
+            var books = document.getElementById('books-content');
+            var skyFeed = document.getElementById('skyfeed-content');
+
+            home.style.display = 'none';
+            skyFeed.style.display = 'none';
+            books.style.display = 'none';
+
+            if (pageID === "home") {
                 // Button Appern
-                skyFeedButton.classList.remove('active');
-                booksButton.classList.remove('active');
                 homeButton.classList.add('active');
                 // Page Loading / Unloading
                 home.style.display = 'block';
-                books.style.display = 'none';
-                skyFeed.style.display = 'none';
                 // Set Window Hash
                 location.hash = "home"
             }
-            else if (buttonID === 2) {
+            else if (pageID === "skyfeed") {
                 // Button Appern
-                homeButton.classList.remove('active');
-                booksButton.classList.remove('active');
                 skyFeedButton.classList.add('active');
                 // Page Loading / Unloading
-                home.style.display = 'none';
-                books.style.display = 'none';
                 skyFeed.style.display = 'block';
                 // Set Window Hash
                 location.hash = "skyfeed" 
             }
-            else if (buttonID === 3) {
+            else if (pageID === "books") {
                 // Button Appern
-                homeButton.classList.remove('active');
-                skyFeedButton.classList.remove('active');
                 booksButton.classList.add('active');
                 // Page Loading / Unloading
-                home.style.display = 'none';
                 books.style.display = 'block';
-                skyFeed.style.display = 'none';
+                // Set Window Hash
+                location.hash = "books"
             }
         }
     </script>
@@ -87,9 +94,9 @@
     <section class="navigation-bar">
         <div class="nav-col">
             <h3>Herold Levente Kiraly</h2>
-            <a id="home-button" class="nav-button active" onclick="pageLoader(1)"><span><i class="fa-solid fa-house"></i> Home</span></a>
-            <a id="sky-feed-button" class="nav-button" onclick="pageLoader(2)"><span><i class="fa-solid fa-rss"></i> BlueSky Feed</span></a>
-            <a id="books-button" class="nav-button" onclick="pageLoader(3)"><span><i class="fa-solid fa-book"></i> Books & Films</span></a>
+            <a id="home-button" class="nav-button active" onclick="pageLoader('home')"><span><i class="fa-solid fa-house"></i> Home</span></a>
+            <a id="skyfeed-button" class="nav-button" onclick="pageLoader('skyfeed')"><span><i class="fa-solid fa-rss"></i> BlueSky Feed</span></a>
+            <a id="books-button" class="nav-button" onclick="pageLoader('books')"><span><i class="fa-solid fa-book"></i> Books & Films</span></a>
             <h2>Current Work</h2>
             <a class="nav-button" href="https://kiralygroup.com/" target="_blank"><span class="work-span"><img class="logo-icon" src="./assets/kg-icon.png">Kiraly Group LLC</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             <h2>Past Work</h2>
@@ -105,7 +112,7 @@
     </section>
     <section class="main-body">
         <div class="content">
-            <div id="main-content-load" style="display: block;" class="contents">
+            <div id="home-content" style="display: block;" class="contents">
                 <div class="artl">
                     <h2 class="content-heading"></h2>
                     <div>
@@ -125,7 +132,7 @@
                     <p class="content-text"></p>
                 </div> -->
             </div>
-            <div id="books-films-load" style="display: none;" class="contents">
+            <div id="books-content" style="display: none;" class="contents">
                 <div class="artl">
                     <h2 class="content-heading">Books</h2>
                     <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/books.txt"></iframe></div>
@@ -137,7 +144,7 @@
                     <!-- <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio cupiditate saepe quidem sequi. Unde atque obcaecati accusamus doloremque neque possimus tempora aliquam explicabo consequuntur sint ipsa beatae nesciunt, in voluptatibus expedita necessitatibus pariatur iusto?</p> -->
                 </div>
             </div>
-            <div id="bluesky-feed-load" style="display: none;" class="contents">
+            <div id="skyfeed-content" style="display: none;" class="contents">
                 <div class="artl">
                     <h2 class="content-heading">Posts</h2>
                     <div id="rss-feed" class="content-text"></div>                 
