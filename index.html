@@ -15,28 +15,37 @@
             currentHash = location.hash.substring(1);
             console.log(currentHash);
             console.log(`page is fully loaded with hash ${currentHash}`);
-            pageLoader(currentHash);
+            if (currentHash != "skyfeed" || currentHash != "books" || currentHash != "portfolio") {
+                currentHash = "home";
+                pageLoader(currentHash);
+            } else {
+                pageLoader(currentHash);
+            }
         };
     </script>
     <script>
         const pageLoader = (pageID) => {
             // Buttons
             var homeButton = document.getElementById('home-button');
-            var booksButton = document.getElementById('books-button');
             var skyFeedButton = document.getElementById('skyfeed-button');
+            var booksButton = document.getElementById('books-button');
+            var portfolioButton = document.getElementById('portfolio-button');
             
+            homeButton.classList.remove('active');
             skyFeedButton.classList.remove('active');
             booksButton.classList.remove('active');
-            homeButton.classList.remove('active');
+            portfolioButton.classList.remove('active');
             
             // Page Contents
             var home = document.getElementById('home-content');
-            var books = document.getElementById('books-content');
             var skyFeed = document.getElementById('skyfeed-content');
+            var books = document.getElementById('books-content');
+            var portfolio = document.getElementById('portfolio-content');
 
             home.style.display = 'none';
             skyFeed.style.display = 'none';
             books.style.display = 'none';
+            portfolio.style.display = 'none';
 
             if (pageID === "home") {
                 // Button Appern
@@ -62,6 +71,14 @@
                 // Set Window Hash
                 location.hash = "books"
             }
+            else if (pageID === "portfolio") {
+                // Button Appern
+                portfolioButton.classList.add('active');
+                // Page Loading / Unloading
+                portfolio.style.display = 'block';
+                // Set Window Hash
+                location.hash = "portfolio"
+            }
         }
     </script>
     <script>
@@ -86,8 +103,9 @@
                     for (var i = 0; i < feedItems.length; i++) {
                     var item = feedItems[i];
                     feedContainer.append(
-                        '<div class="artl">' +
-                            '<h2 class="content-heading">' + item.pubDate + '</h2>' +
+                        '<div class="artl rss-artl">' +
+                            '<h2 class="content-heading rss-heading">' + item.pubDate + '<br><a class="rss-link" target="_blank" href="' + item.link + '">' + 'source' + '</a></h2>' +
+                            // '<h2 class="content-heading rss-heading"><a target="_blank" href="' + item.link + '">' + 'Go To' + '</a></h2>' +
                             '<p class="content-text">'+ item.title +'</p>' +                
                         '</div>'
                     );
@@ -138,6 +156,7 @@
                     <p class="content-text"></p>
                 </div> -->
             </div>
+
             <div id="books-content" style="display: none;" class="contents">
                 <div class="artl">
                     <h2 class="content-heading">Books</h2>
@@ -150,8 +169,18 @@
                     <!-- <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio cupiditate saepe quidem sequi. Unde atque obcaecati accusamus doloremque neque possimus tempora aliquam explicabo consequuntur sint ipsa beatae nesciunt, in voluptatibus expedita necessitatibus pariatur iusto?</p> -->
                 </div>
             </div>
+
             <div id="skyfeed-content" style="display: none;" class="contents">
                 <div id="rss-feed" class="content-text"></div>
+            </div>
+
+            <div id="portfolio-content" style="display: none;" class="contents">
+                <div class="artl">
+                    <h2 class="content-heading">Web</h2>
+                </div>
+                <div class="artl">
+                    <h2 class="content-heading">Design</h2>
+                </div>
             </div>
         </div>
     </section>
