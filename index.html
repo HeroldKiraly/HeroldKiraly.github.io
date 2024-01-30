@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Herold K.</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icon.ico">
+    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="./assets/icon.ico">
-    <title>Herold K.</title>
+    <!-- Icons -->
     <script src="https://kit.fontawesome.com/ce21308127.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- React JS -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin defer></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin defer></script>
+    <!-- Babel/JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
+    <script src="/scripts/portfolio-item.js" type="text/babel" defer></script>
 </head>
 <body>
     <script>
@@ -15,7 +25,7 @@
             currentHash = location.hash.substring(1);
             console.log(currentHash);
             console.log(`page is fully loaded with hash ${currentHash}`);
-            if (currentHash != "skyfeed" || currentHash != "books" || currentHash != "portfolio") {
+            if (currentHash !== "skyfeed" || currentHash !== "books" || currentHash !== "portfolio") {
                 currentHash = "home";
                 pageLoader(currentHash);
             } else {
@@ -148,7 +158,7 @@
                 </div>
                 <div class="artl">
                     <h2 class="content-heading">Where</h2>
-                    <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=300&amp;hl=en&amp;q=USA+(Tri-State)&amp;t=&amp;z=4&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Find Population on Map</a></iframe></div>
+                    <div style="width: 100%; border-radius: 2rem;"><iframe width="600" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=300&amp;hl=en&amp;q=USA+(Tri-State)&amp;t=&amp;z=4&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Find Population on Map</a></iframe></div>
                     <!-- <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio cupiditate saepe quidem sequi. Unde atque obcaecati accusamus doloremque neque possimus tempora aliquam explicabo consequuntur sint ipsa beatae nesciunt, in voluptatibus expedita necessitatibus pariatur iusto?</p> -->
                 </div>
                 <!-- <div class="artl">
@@ -160,12 +170,12 @@
             <div id="books-content" style="display: none;" class="contents">
                 <div class="artl">
                     <h2 class="content-heading">Books</h2>
-                    <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/books.txt"></iframe></div>
+                    <div style="width: 100%; border-radius: 2rem;"><iframe width="600" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/books.txt"></iframe></div>
                     <!-- <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio cupiditate saepe quidem sequi. Unde atque obcaecati accusamus doloremque neque possimus tempora aliquam explicabo consequuntur sint ipsa beatae nesciunt, in voluptatibus expedita necessitatibus pariatur iusto?</p> -->
                 </div>
                 <div class="artl">
                     <h2 class="content-heading">Films</h2>
-                    <div style="width: 100%; border-radius: 2rem;"><iframe width="720" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/films.txt"></iframe></div>
+                    <div style="width: 100%; border-radius: 2rem;"><iframe width="600" height="300" frameborder="1" scrolling="no" marginheight="25" marginwidth="19" src="./txt-files/films.txt"></iframe></div>
                     <!-- <p class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odio cupiditate saepe quidem sequi. Unde atque obcaecati accusamus doloremque neque possimus tempora aliquam explicabo consequuntur sint ipsa beatae nesciunt, in voluptatibus expedita necessitatibus pariatur iusto?</p> -->
                 </div>
             </div>
@@ -177,6 +187,11 @@
             <div id="portfolio-content" style="display: none;" class="contents">
                 <div class="artl">
                     <h2 class="content-heading">Web</h2>
+                    <div id="portfolio">
+                        <div id="portfolio-root" class="portfolio-grid-container">
+                            <!-- Injected By React -->
+                        </div>
+                    </div>
                 </div>
                 <div class="artl">
                     <h2 class="content-heading">Design</h2>
