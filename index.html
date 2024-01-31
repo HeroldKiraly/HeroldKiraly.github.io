@@ -17,7 +17,7 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin defer></script>
     <!-- Babel/JSX -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
-    <script src="/scripts/portfolio-item.js" type="text/babel" defer></script>
+    <script src="./scripts/portfolio-item.js" type="text/babel" defer></script>
 </head>
 <body>
     <script>
@@ -25,8 +25,9 @@
             currentHash = location.hash.substring(1);
             console.log(currentHash);
             console.log(`page is fully loaded with hash ${currentHash}`);
-            if (currentHash !== "skyfeed" || currentHash !== "books" || currentHash !== "portfolio") {
+            if (currentHash != "skyfeed" && currentHash != "books" && currentHash != "portfolio") {
                 currentHash = "home";
+                console.log(currentHash);
                 pageLoader(currentHash);
             } else {
                 pageLoader(currentHash);
